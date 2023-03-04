@@ -80,7 +80,7 @@ pipeline {
                 sh '''
                  docker pull ghaithbhs/devops
                  docker pull ghaithbhs/achat_frontf
-		 docker-compose up -d 
+		 docker-compose up 
                  docker-compose ps
 		'''
               }
