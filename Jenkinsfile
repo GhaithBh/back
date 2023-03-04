@@ -63,7 +63,7 @@ pipeline {
          stage('build')
         {
             steps {
-                 sh 'docker build --build-arg IP=0.0.0.0 -t ghaithbhs/devops  .'
+                 sh 'docker build --build-arg IP=192.168.100.116 -t ghaithbhs/devops  .'
             }
         }
 
@@ -80,7 +80,7 @@ pipeline {
                 sh '''
                  docker pull ghaithbhs/devops
                  docker pull ghaithbhs/achat_frontf
-		 docker-compose up 
+		 docker-compose up -d
                  docker-compose ps
 		'''
               }
